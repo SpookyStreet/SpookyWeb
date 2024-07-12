@@ -1,69 +1,324 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
- <head>
-   
-  <!-- Title of the website --> 
-  <title>
-      Spooky Street IND.
-  </title>
-    
-    <!-- Imports css style sheet & fonts from google --> 
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
- </head>
-
- <body>
-
-    <!-- Text --> 
-    <h1 class="website-title">
-      Spooky Street IND.
-    </h1>
-
-     <!-- Text --> 
-     <p class="paragraph-yolo">
-      Portfolio
-    </p>   
-
-    <!-- itch.io Derek widget --> 
-    <iframe frameborder="0" src="https://itch.io/embed/2347731" width="552" height="167"><a href="https://spooky-street-industries.itch.io/derek-the-bird-flapper-web">Derek The Bird Flapper - Web Version by Spooky Street Industries</a></iframe>
-
-    <p class="paragraph-yolo">
-    </p>   
-    <iframe frameborder="0" src="https://itch.io/embed/2669298" width="552" height="167"><a href="https://spooky-street-industries.itch.io/ponggers-brother">Ponggers Brother!! by Spooky Street Industries</a></iframe>
-
-    <p class="paragraph-yolo">
-    </p>  
-    <iframe frameborder="0" src="https://itch.io/embed/2750077" width="552" height="167"><a href="https://spooky-street-industries.itch.io/squared-survivor">Squared Survivor by Spooky Street Industries</a></iframe>
-
-    <p class="paragraph-yolo">
-    </p>   
-    <!-- Subscribe button linked to youtube --> 
-    <button class="subscribe-button" onclick="window.location.href='https://www.youtube.com/@SpookyStreetIndustries'">
-      youtube
-    </button>
-
-    <p class="paragraph-yolo">
-    </p>   
-      <!-- Subscribe button linked to youtube --> 
-    <button class="subscribe-button" onclick="window.location.href='https://github.com/SpookyStreet?tab=repositories'">
-      GitHub
-    </button>
-    
-    <!-- Text --> 
-    <p class="paragraph-yolo">
-      By Thomas Street.
-    </p>
-    
-<!--
-   <a href="https://www.youtube.com/channel/UCV6Lvson7Q4wjlJL4bGe8_g" target="_blank">
-      Link to youtube
-    </a>
---> 
-
- </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tiltle here -->
+  <title>Spooky Street IND</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+  <!-- navigation links Desktop-->
+  <nav id="desktop-nav">
+    <div class="logo">Spooky Street IND.</div>
+    <div>
+      <ul class = "nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- navigation links hamburger-->
+  <nav id="hamburger-nav">
+    <div class="logo">Spooky Street</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>  
+      <div class = "menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+   <!-- profile section-->
+  <section id="profile">
+    <div class = "section__pic-container"> 
+      <img src="./assets/profile-pic.png" alt="Tom Street profile picture">        
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Tom Street</h1>
+      <p class="section__text__p2">Game Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Thomas-Street-MPhys-CV.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My Linkedin profile" class="icon" onclick="location.href='https://www.linkedin.com/in/thomas-a-street/'">
+        <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/SpookyStreet'">
+      </div>
+    </div>
+  </section>
+  <!-- about section-->
+   <section id="about">
+    <p class="section__text__p1">Get to know more</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic">
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon">
+            <h3>Experience</h3>
+            <p>1 year<br>Game Devlopment</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="education icon" class="icon">
+            <h3>Education</h3>
+            <p>MPhys Master's Degree </p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            I have built and self-published three video games made using C++ with the raylib library, Unity, and
+Godot. I am a physics master’s graduate with 2 years of post-graduate research experience in
+quantum engineering with a strong foundation in advanced mathematics, coding, and simulation
+techniques. My research experience has honed my skills in experiment design, data analysis, and
+effective communication. Working in a research team has taught me the importance of collaboration,
+teamwork, and project management.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+   </section>
+   <!-- experience section-->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- frontend -->
+          <div class="details-container">  
+            <h2 class="experience-sub-title">Development Tools</h2>
+            <div class="article-container">
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>C++</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>C#</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>C</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>GDScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>MATLAB</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>Maple</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>Godot</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>Unreal</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>Unity</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- backend -->
+          <!-- div class="details-container">  
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div -->
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+    </section>
+    <!-- project section-->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/Derek-itch-cover.png" alt="Derek cover" class="project-img">
+          </div>
+          <h2 class="experience-sub-title project-title">Derek The Bird Flapper</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://spooky-street-industries.itch.io/derek-the-bird-flapper-web'">
+              Live Demo
+            </button>
+          </div>
+          </div>
+          <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/Ponggers-Brother.png" alt="Ponggers Brother" class="project-img">
+          </div>
+          <h2 class="experience-sub-title project-title">Ponggers Brother!!</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://spooky-street-industries.itch.io/ponggers-brother'">
+              Live Demo
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SpookyStreet/Pong'">
+              Github
+            </button>
+          </div>
+          </div>
+          <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/Squared-Survivor.png" alt="Squared Survivor" class="project-img">
+          </div>
+          <h2 class="experience-sub-title project-title">Squared Survivor</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://spooky-street-industries.itch.io/squared-survivor'">
+              Live Demo
+            </button>
+          </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
+    </section>
+    <!-- contact section-->
+    <section id="contact">
+      <p class="section__text__p1">Get in touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="assets/email.png" alt="Email Icon" class="icon contact-icon email-icon">
+          <p><a href="mailto:tom_street@hotmail.co.uk">tom_street@hotmail.co.uk</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="assets/linkedin.png" alt="Linkedin Icon" class="icon contact-icon">
+          <p><a href="https://www.linkedin.com/in/thomas-a-street/">LinedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- footer-->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class = "nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Thomas Street. All Rights Reserved.</p>
+    </footer>
+  <script src="script.js"></script>
+</body>
 </html>
